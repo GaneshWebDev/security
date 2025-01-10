@@ -1,5 +1,7 @@
 const express=require('express');
-const app=express();
+const helmet=require('helmet');
+const app=express()
+app.use(helmet.hidePoweredBy());
 app.use('/',(req,res)=>{
     res.json({message:'hello world'})
 })
